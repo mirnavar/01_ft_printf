@@ -25,20 +25,20 @@ HDR = libftprintf.h libft.h
 all:		$(NAME)
 
 $(NAME):	$(OBJ) $(HDR)
-			ar -rcs	$(NAME) $(OBJ)
+		ar -rcs	$(NAME) $(OBJ)
 
 %.o:		%.c $(HDR)
-			$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
+		$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
 clean:
-			rm -f $(OBJ)
+		rm -f $(OBJ)
 
 fclean:
-			$(MAKE) clean
-			rm -f $(NAME)
+		$(MAKE) clean
+		rm -f $(NAME)
 
 re:
-			$(MAKE) fclean
-			$(MAKE) all
+		$(MAKE) fclean
+		$(MAKE) all
 
 .PHONY: all clean fclean re
