@@ -5,33 +5,40 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/23 15:07:42 by mirnavar          #+#    #+#              #
-#    Updated: 2022/11/23 17:54:49 by mirnavar         ###   ########.fr        #
+#    Created: 2022/11/24 13:43:10 by mirnavar          #+#    #+#              #
+#    Updated: 2022/11/29 16:27:47 by mirnavar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME		= libftprintf.a
 
-SRC = 
+SRC_DIR		= srcs
+INC_DIR		= includes
+OBJ_DIR		= obj
 
-OBJ = $(SRC:%.c=%.o)
+SRC 		= ft_printf.c	ft_putchar.c
+INC			= -I $(INC_DIR) 
+OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o)) #probar con %.c=%.o tendria que funcionar 
+DEP			= $(addsuffix .d,$(basename$(OBJ))) #marc lo tiene muy diff. con addsufix y basename
+LIB			= srcs/ft_printf.h
 
-CFLAGS = -Wall -Wextra -Werror
+CC			= gcc
+CFLAGS		= -Werror -Wextra -Wall -MMD $(INC)
 
-CC = gcc
-
-HDR = libftprintf.h libft.h
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(LIB)
+			mkdir -p $(dir $@)
+			$(CC) $(CFLAGS) -c $< -o $@
 
 all:		$(NAME)
 
-$(NAME):	$(OBJ) $(HDR)
-			ar -rcs	$(NAME) $(OBJ)
-
-%.o:		%.c $(HDR)
-			$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
+-include $(DEP) 
+$(NAME):	$(OBJ) $(LIB)
+			ar -rcs $(NAME) $(OBJ)
 
 clean:
 			rm -f $(OBJ)
+			#rm -f $(DEP)
+			rm -rf $(OBJ_DIR)
 
 fclean:
 			$(MAKE) clean
