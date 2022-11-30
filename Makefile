@@ -6,11 +6,11 @@
 #    By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 13:43:10 by mirnavar          #+#    #+#              #
-#    Updated: 2022/11/30 10:31:17 by mirnavar         ###   ########.fr        #
+#    Updated: 2022/11/30 10:58:30 by mirnavar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= libftprintf
+NAME		= libftprintf.a
 
 SRC_DIR		= srcs
 INC_DIR		= includes
