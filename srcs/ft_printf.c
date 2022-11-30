@@ -28,6 +28,8 @@ int	ft_printf(const char *str, ...)
 			i++;
 			if (str[i] == 'c')
 				rslt += ft_putchar(va_arg(args, int));
+			if (str[i] == 's'
+			   	rslt += ft_putstr(va_arg(args, int));
 		}
 		else
 		{
