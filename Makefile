@@ -16,7 +16,7 @@ SRC_DIR		= srcs
 INC_DIR		= includes
 OBJ_DIR		= obj
 
-SRC 		= ft_printf.c	ft_putchar.c
+SRC 		= ft_printf.c	ft_putchar.c	ft_putstr.c
 INC			= -I $(INC_DIR) 
 OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o)) #probar con %.c=%.o tendria que funcionar 
 DEP			= $(addsuffix .d,$(basename$(OBJ))) #marc lo tiene muy diff. con addsufix y basename
