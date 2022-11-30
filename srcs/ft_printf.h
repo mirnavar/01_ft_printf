@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:36:18 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/11/29 16:21:18 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/11/30 12:45:17 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-int		ft_printf(const char *str, ...);
-ssize_t	ft_putchar(char c);
+int	ft_printf(const char *str, ...);
+int	ft_putchar(char c);
 
 #endif
