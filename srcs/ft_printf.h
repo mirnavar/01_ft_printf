@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:36:18 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/01 15:09:23 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:08:21 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@
 
 int	ft_printf(const char *str, ...);
 int	ft_putchar(char c);
-int	ft_putstr(const char *str);
+int	ft_putstr(char *str);
 
 #endif

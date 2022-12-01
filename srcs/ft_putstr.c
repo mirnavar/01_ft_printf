@@ -6,13 +6,13 @@
 /*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 20:15:36 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/01 15:23:56 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:07:59 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(const char *str)
+int	ft_putstr(char *str)
 {
 	int	i;
 	int	wlength;
