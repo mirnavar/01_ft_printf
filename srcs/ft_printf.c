@@ -6,11 +6,13 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:55:05 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/01 16:16:58 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:07:30 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int ft_conversion(va_list args, char conver);
 
 int	ft_printf(const char *str, ...)
 {
@@ -28,10 +30,12 @@ int	ft_printf(const char *str, ...)
 			i++;
 			if (str[i] == '%')
 				rslt += write(1, "%", 1);
-			if (str[i] == 'c')
-				rslt += ft_putchar(va_arg(args, int));
-			if (str[i] == 's')
-				rslt += ft_putstr(va_arg(args, const char *));
+			else
+				rslt += ft_conversion(args, str[i]);
+		//	if (str[i] == 'c')
+		//		rslt += ft_putchar(va_arg(args, int));
+		//	if (str[i] == 's')
+		//		rslt += ft_putstr(va_arg(args, const char *));
 		}
 		else
 			rslt += write(1, &str[i], 1);
@@ -41,7 +45,14 @@ int	ft_printf(const char *str, ...)
 	return (rslt);
 }
 
-int ft_conversion(const char *str, va_list args)
+static int ft_conversion(va_list args, char conver)
 {
+	int	rslt;
 
+	rslt = 0;
+	if (conver == 'c')
+		rslt += ft_putchar(va_arg(args, int));
+	else if (conver == 's')
+		rslt += ft_putstr(va_arg(args, char *));
+	return (rslt);
 }
