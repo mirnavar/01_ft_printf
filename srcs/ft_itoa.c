@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/06 10:59:57 by mirnavar          #+#    #+#             */
+/*   Updated: 2022/12/06 11:10:58 by mirnavar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -5,7 +16,7 @@ static void	ft_len(int n, int *len);
 
 int	ft_itoa(int n)
 {
-	int	len;
+	int		len;
 	char	*str;
 
 	if (n == -2147483648)
@@ -28,10 +39,11 @@ int	ft_itoa(int n)
 	}
 	str[len - 1] = (n % 10) + 48;
 	len = ft_putstr(str);
-	return (len); 
+	free(str);
+	return (len);
 }
-//len = ft_putstr(str) : porque si solo hago ft_putstr y el return es len, len = 1 (ver len--) y tengo 
-//que devolver el número de carácteres printeados
+//len = ft_putstr(str) : porque si solo hago ft_putstr y el return es len, 
+//len = 1 (ver len--) y tengo que devolver el número de carácteres printeados
 
 static void	ft_len(int n, int *len)
 {

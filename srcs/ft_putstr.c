@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 20:15:36 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/05 14:23:01 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/06 11:07:04 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_putstr(char *str)
 		wlength += write(1, &str[i], 1);
 		i++;
 	}
-//	printf("valor devuelto por ft_putstr %d\n", wlength);
 	return (wlength);
 }
+//printf("valor devuelto por ft_putsrt %d\n", wlength);
+//testeo para saber el valor devuelto. Va antes del return.
