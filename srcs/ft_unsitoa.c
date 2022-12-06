@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:53:04 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/06 10:59:39 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/06 12:02:56 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_len(unsigned int n, int *len);
 
-int	ft_uitoa(unsigned int n)
+int	ft_unsitoa(unsigned int n)
 {
 	int		len;
 	char	*str;

@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:36:18 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/05 14:51:23 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/06 14:01:17 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_printf(const char *str, ...);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_itoa(int n);
-int	ft_uitoa(unsigned int n);
+int	ft_unsitoa(unsigned int n);
+int ft_hexa(unsigned int n, int form);
 
 #endif
