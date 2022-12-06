@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:55:05 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/02 12:43:33 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/05 15:10:16 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,9 @@ static int ft_conversion(va_list args, char conver)
 		rslt += ft_putchar(va_arg(args, int));
 	else if (conver == 's')
 		rslt += ft_putstr(va_arg(args, char *));
-	else if (conver == 'd')
+	else if (conver == 'd'|| conver == 'i')
 		rslt += ft_itoa(va_arg(args, int));
+	else if (conver == 'u')
+		rslt += ft_uitoa(va_arg(args, unsigned int));
 	return (rslt);
 }

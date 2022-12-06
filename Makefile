@@ -6,7 +6,7 @@
 #    By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 13:43:10 by mirnavar          #+#    #+#              #
-#    Updated: 2022/12/02 14:36:15 by mirnavar         ###   ########.fr        #
+#    Updated: 2022/12/05 14:52:31 by mirnavar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC_DIR		= srcs
 INC_DIR		= includes
 OBJ_DIR		= obj
 
-SRC 		= ft_printf.c	ft_putchar.c	ft_putstr.c		ft_itoa.c
+SRC 		= ft_printf.c	ft_putchar.c	ft_putstr.c	ft_itoa.c	ft_uitoa.c
 INC			= -I $(INC_DIR) 
 OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o)) #probar con %.c=%.o tendria que funcionar 
 DEP			= $(addsuffix .d,$(basename$(OBJ))) #marc lo tiene muy diff. con addsufix y basename
