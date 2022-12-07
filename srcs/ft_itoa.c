@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 10:59:57 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/06 11:10:58 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:02:24 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_itoa(int n)
 	}
 	str[len - 1] = (n % 10) + 48;
 	len = ft_putstr(str);
+	//printf("%d\n", len);
 	free(str);
 	return (len);
 }
