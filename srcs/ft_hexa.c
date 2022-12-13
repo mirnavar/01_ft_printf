@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:33:19 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/07 13:38:00 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/07 19:58:16 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	ft_hexa(unsigned int n, int form)
 	if (form == 2)
 		base = "0123456789ABCDEF";
 	len = ft_len(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	str = (char *)malloc(sizeof(char) * (len + 1));//
+	if (str == NULL)//
 		return (-1);
 	str[len] = '\0';
-	while (n > 16 && len > 1)
+	while (n > 16)
 	{
 		str[len - 1] = base[n % 16];
 		n = n / 16;
@@ -47,12 +47,11 @@ static int	ft_len(int n)
 	int	len;
 
 	len = 0;
-	while (n > 16)
+	while (n > 0)
 	{
 		len++;
 		n = n / 16;
 	}
-	len++;
 	return (len);
 }
 
