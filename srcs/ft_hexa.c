@@ -6,11 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:33:19 by mirnavar          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/12/13 14:14:38 by mirnavar         ###   ########.fr       */
-=======
-/*   Updated: 2022/12/07 19:58:16 by mirnavar         ###   ########.fr       */
->>>>>>> 4aeec29bc19d0f30015695214bffca154d6caf7a
+/*   Updated: 2022/12/13 19:45:06 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +25,11 @@ int	ft_hexa(unsigned int n, int form)
 	if (form == 2)
 		base = "0123456789ABCDEF";
 	len = ft_len(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));//
-	if (str == NULL)//
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
 		return (-1);
 	str[len] = '\0';
-<<<<<<< HEAD
 	while (n >= 16)
-=======
-	while (n > 16)
->>>>>>> 4aeec29bc19d0f30015695214bffca154d6caf7a
 	{
 		str[len - 1] = base[n % 16];
 		n = n / 16;
@@ -54,11 +46,7 @@ static int	ft_len(unsigned int n)
 	int	len;
 
 	len = 0;
-<<<<<<< HEAD
 	while (n >= 16)
-=======
-	while (n > 0)
->>>>>>> 4aeec29bc19d0f30015695214bffca154d6caf7a
 	{
 		len++;
 		n = n / 16;
