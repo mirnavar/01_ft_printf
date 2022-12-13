@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:33:19 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/13 19:45:06 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:51:40 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ static int	ft_len(unsigned int n)
 		len++;
 		n = n / 16;
 	}
+	len++;
 	return (len);
 }
 
