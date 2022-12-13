@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:16:32 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/13 15:02:19 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:00:37 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ int	ft_void(unsigned long long int n)
 	int		len;
 
 	base = "0123456789abcdef";
+	write(1, "0x", 2);
 	len = ft_len(n);
-	str = (char *)malloc(sizeof(char) * (len + 3));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (-1);
-	str[len + 2] = '\0';
+	str[len] = '\0';
 	while (n >= 16)
 	{
 		str[len - 1] = base[n % 16];
@@ -33,11 +34,9 @@ int	ft_void(unsigned long long int n)
 		len--;
 	}
 	str[len - 1] = base[n % 16];
-	str[len - 2] = ft_putstr("0");
-	str[len - 3] = ft_putstr("x");
-	len = ft_putstr(str) + 2;
+	len = ft_putstr(str);
 	free(str);
-	return (len);
+	return (len + 2);
 }
 
 static int	ft_len(unsigned long long int n)

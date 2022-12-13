@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:55:05 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/13 14:20:24 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/13 18:58:30 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(args);
-	//printf("%d\n", rslt);
 	return (rslt);
 }
 
