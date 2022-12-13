@@ -6,13 +6,13 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:33:19 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/07 13:38:00 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:14:38 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_len(int n);
+static int	ft_len(unsigned int n);
 
 int	ft_hexa(unsigned int n, int form)
 {
@@ -29,7 +29,7 @@ int	ft_hexa(unsigned int n, int form)
 	if (!str)
 		return (-1);
 	str[len] = '\0';
-	while (n > 16 && len > 1)
+	while (n >= 16)
 	{
 		str[len - 1] = base[n % 16];
 		n = n / 16;
@@ -37,17 +37,16 @@ int	ft_hexa(unsigned int n, int form)
 	}
 	str[len - 1] = base[n % 16];
 	len = ft_putstr(str);
-	//printf("%d\n", len);
 	free(str);
 	return (len);
 }
 
-static int	ft_len(int n)
+static int	ft_len(unsigned int n)
 {
 	int	len;
 
 	len = 0;
-	while (n > 16)
+	while (n >= 16)
 	{
 		len++;
 		n = n / 16;

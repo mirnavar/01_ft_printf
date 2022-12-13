@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:55:05 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/07 13:33:49 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:20:24 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ static int	ft_conversion(va_list args, char conver)
 		rslt += ft_hexa(va_arg(args, unsigned int), 1);
 	else if (conver == 'X')
 		rslt += ft_hexa(va_arg(args, unsigned int), 2);
+	else if (conver == 'p')
+		rslt += ft_void(va_arg(args, unsigned long long int));
 	return (rslt);
 }
