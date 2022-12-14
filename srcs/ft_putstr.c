@@ -6,7 +6,7 @@
 /*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 20:15:36 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/07 11:12:04 by mirnavar         ###   ########.fr       */
+/*   Updated: 2022/12/14 10:47:19 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	ft_putstr(char *str)
 	wlength = 0;
 	while (str[i])
 	{
-		wlength += write(1, &str[i], 1);
+		if (write(1, &str[i], 1) == -1)
+			return (-1);
+		wlength++;
 		i++;
 	}
 	return (wlength);
